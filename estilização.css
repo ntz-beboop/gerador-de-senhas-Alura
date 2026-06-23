@@ -1,0 +1,180 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #1e2d3b;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    background-color: #0d1b2a;
+    border: 1px solid #1b4965;
+    border-radius: 4px;
+    padding: 40px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cadeado-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #4ea8de;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #a9c6e2;
+    font-size: 1rem;
+}
+
+.senha-container {
+    background-color: #005f73;
+    padding: 15px 20px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #0a9396;
+}
+
+.senha-container span {
+    color: #94d2bd;
+    font-size: 0.9rem;
+}
+
+.senha-container strong {
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    color: #ffffff;
+    word-break: break-all;
+}
+
+.configuracoes h2 {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+.grid-config {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+@media (max-width: 768px) {
+    .grid-config {
+        grid-template-columns: 1fr;
+    }
+}
+
+.coluna h3 {
+    font-size: 1rem;
+    color: #a9c6e2;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+/* Seletor de Tamanho (- 12 +) */
+.seletor-tamanho {
+    display: flex;
+    align-items: center;
+    border: 1px solid #1b4965;
+    width: fit-content;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.seletor-tamanho button {
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 1.2rem;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.seletor-tamanho button:hover {
+    background-color: #1b4965;
+}
+
+.seletor-tamanho span {
+    width: 50px;
+    text-align: center;
+    font-weight: bold;
+    border-left: 1px solid #1b4965;
+    border-right: 1px solid #1b4965;
+    line-height: 40px;
+}
+
+/* Checkboxes */
+.coluna label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.coluna input[type="checkbox"] {
+    accent-color: #0a9396;
+    width: 16px;
+    height: 16px;
+}
+
+/* Força da Senha */
+.barra-forca-container {
+    background-color: #1b4965;
+    height: 15px;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+#barra-forca {
+    height: 100%;
+    width: 0%;
+    transition: width 0.3s, background-color 0.3s;
+}
+
+/* Cores de força dinâmicas */
+#barra-forca.fraca { width: 33%; background-color: #ee6c4d; }
+#barra-forca.media { width: 66%; background-color: #e9c46a; }
+#barra-forca.forte { width: 100%; background-color: #2a9d8f; }
+
+.labels-forca {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: #a9c6e2;
+    margin-bottom: 15px;
+}
+
+.tempo-crack {
+    font-size: 0.8rem;
+    color: #a9c6e2;
+    line-height: 1.4;
+}
